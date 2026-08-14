@@ -8,6 +8,10 @@ class CustomScaffoldWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+        image: DecorationImage(
+          alignment: AlignmentGeometry.topCenter,
+          image: AssetImage("assets/backgroundimage.png"),
+        ),
         gradient: LinearGradient(
           begin: AlignmentGeometry.topStart,
           end: AlignmentGeometry.bottomEnd,

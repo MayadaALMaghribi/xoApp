@@ -12,6 +12,7 @@ class WelcomScreen extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          //Image.asset("assets/backgroundimage.png"),
           Spacer(),
           Text(
             "Tix-Tac-Toe",
@@ -24,6 +25,7 @@ class WelcomScreen extends StatelessWidget {
             style: AppTextStyle.white24Medium,
             textAlign: TextAlign.center,
           ),
+
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 17),
             child: Row(
