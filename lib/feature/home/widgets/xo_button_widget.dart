@@ -1,24 +1,20 @@
 import 'package:flutter/material.dart';
 
-class XoButtonWidget extends StatefulWidget {
+class XoButtonWidget extends StatelessWidget {
   const XoButtonWidget({super.key, required this.symbol, required this.onTap});
   final String symbol;
   final Function()? onTap;
+  //  final int index;
 
-  @override
-  State<XoButtonWidget> createState() => _XoButtonWidgetState();
-}
-
-class _XoButtonWidgetState extends State<XoButtonWidget> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: InkWell(
-        onTap: widget.onTap,
-        child: widget.symbol.isEmpty
-            ? SizedBox()
+        onTap: onTap,
+        child: symbol.isEmpty
+            ? SizedBox(height: double.infinity, width: double.infinity)
             : Image.asset(
-                widget.symbol == "X" ? "assets/X.png" : "assets/O.png",
+                symbol == "X" ? "assets/X.png" : "assets/O.png",
                 scale: 2.1,
               ),
       ),
