@@ -136,10 +136,13 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     ),
   );
-
+  int counter = 0;
   onPlayerClick(int index) {
-    print("click");
-    board[index] = "O";
+    print(counter);
+    if (board[0].isEmpty) return;
+    board[index] = counter.isEven ? "O" : "X";
+
+    counter++;
     setState(() {});
   }
 }
